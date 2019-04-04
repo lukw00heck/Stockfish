@@ -40,7 +40,7 @@ struct Entry {
   int weak_unopposed(Color c) const { return weakUnopposed[c]; }
   int passed_count() const { return passedCount; }
 
-  int semiopen_file(Color c, File f) const {
+  bool is_semiopen_file(Color c, File f) const {
     return semiopenFiles[c] & (1 << f);
   }
 
